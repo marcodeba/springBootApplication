@@ -6,17 +6,6 @@ import springbootapplication.demo.domain.ConfigBean;
 
 @RestController
 public class UserController {
-//    @Value("${com.dudu.name}")
-//    private String name;
-//
-//    @Value("${com.dudu.want}")
-//    private String want;
-//
-//    @RequestMapping("/")
-//    public String hello() {
-//        return name + "," + want;
-//    }
-
     @Autowired
     ConfigBean configBean;
 
