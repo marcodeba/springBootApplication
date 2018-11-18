@@ -46,6 +46,7 @@ public class StudentController {
     }
 
     @GetMapping(value = "/getAgeById/{id}")
+    @ResponseBody
     public void getStudentAge(@PathVariable("id") Integer id) throws Exception {
         queryService.getStudentAge(id);
     }
