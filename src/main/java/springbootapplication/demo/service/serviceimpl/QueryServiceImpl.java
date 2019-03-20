@@ -27,9 +27,13 @@ public class QueryServiceImpl implements IQueryService {
     }
 
     @Override
-    public Student getStudentById(Integer id) {
+    public Student getStudentById(Integer id) throws Exception {
         System.out.println("getStudentById:" + id);
-        return studentRespoitory.findById(id).get();
+        if (studentRespoitory.findById(id).isPresent())
+            return studentRespoitory.findById(id).get();
+        else {
+            throw new StudentException(ResultEnum.NoDataFound);
+        }
     }
 
     public List<Student> getStudentsByAge(Integer age) {

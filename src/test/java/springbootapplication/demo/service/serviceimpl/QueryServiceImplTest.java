@@ -25,8 +25,8 @@ public class QueryServiceImplTest {
 
     @Test
     public void testCache() throws Exception {
-        queryService.getStudentById(5);
-        queryService.getStudentById(5);
-        queryService.getStudentById(5);
+        queryService.getStudentById(15);
+        queryService.getStudentById(15);
+        queryService.getStudentById(15);
     }
 }
