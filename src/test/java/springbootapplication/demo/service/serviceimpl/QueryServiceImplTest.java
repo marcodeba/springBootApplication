@@ -22,4 +22,11 @@ public class QueryServiceImplTest {
         Student student = queryService.getStudentById(5);
         Assert.assertEquals(new Integer(1), student.getAge());
     }
+
+    @Test
+    public void testCache() throws Exception {
+        queryService.getStudentById(5);
+        queryService.getStudentById(5);
+        queryService.getStudentById(5);
+    }
 }
