@@ -28,6 +28,7 @@ public class QueryServiceImpl implements IQueryService {
 
     @Override
     public Student getStudentById(Integer id) {
+        System.out.println("getStudentById:" + id);
         return studentRespoitory.findById(id).get();
     }
 
