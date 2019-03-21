@@ -35,7 +35,7 @@ public class StudentController {
 
     @GetMapping(value = "/getStudentById/{stuId}")
     @ResponseBody
-    public Result<Student> getStudentById(@PathVariable("stuId") Integer stuId) throws Exception{
+    public Result<Student> getStudentById(@PathVariable("stuId") Integer stuId) throws Exception {
         try {
             return ResultUtil.success(queryService.getStudentById(stuId));
         } catch (Exception e) {
@@ -53,5 +53,10 @@ public class StudentController {
     @ResponseBody
     public void getStudentAge(@PathVariable("id") Integer id) throws Exception {
         queryService.getStudentAge(id);
+    }
+
+    @DeleteMapping(value = "/delStudentById/{stuId}")
+    public void deleteStudentById(@PathVariable("stuId") Integer stuId) {
+        queryService.delStudentById(stuId);
     }
 }

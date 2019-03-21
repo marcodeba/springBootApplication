@@ -10,7 +10,7 @@ import springbootapplication.demo.domain.ConfigBean;
 @RestController
 @SpringBootApplication
 @EnableConfigurationProperties({ConfigBean.class})
-@ComponentScan(basePackages={"springbootapplication.*"})
+@ComponentScan(basePackages = {"springbootapplication.*"})
 public class DemoApplication {
 
     public static void main(String[] args) {

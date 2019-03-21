@@ -4,9 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import springbootapplication.demo.dao.StudentRespoitory;
 import springbootapplication.demo.dao.entity.Student;
+import springbootapplication.demo.enums.ResultEnum;
 import springbootapplication.demo.exception.StudentException;
 import springbootapplication.demo.service.IQueryService;
-import springbootapplication.demo.enums.ResultEnum;
 
 import java.util.List;
 
@@ -46,5 +46,10 @@ public class QueryServiceImpl implements IQueryService {
         if (student.getAge() > 100) {
             throw new StudentException(ResultEnum.RESULTISINVALID);
         }
+    }
+
+    @Override
+    public void delStudentById(Integer id) {
+        studentRespoitory.deleteById(id);
     }
 }
