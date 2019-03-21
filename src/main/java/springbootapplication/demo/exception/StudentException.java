@@ -2,7 +2,7 @@ package springbootapplication.demo.exception;
 
 import springbootapplication.demo.enums.ResultEnum;
 
-public class StudentException extends Exception {
+public class StudentException extends RuntimeException {
     private Integer code;
 
     public StudentException(Integer code, String msg) {

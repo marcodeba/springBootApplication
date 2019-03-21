@@ -41,7 +41,7 @@ public class QueryServiceImpl implements IQueryService {
     }
 
     @Override
-    public void getStudentAge(Integer id) throws Exception {
+    public void getStudentAge(Integer id) {
         Student student = studentRespoitory.findById(id).get();
         if (student.getAge() > 100) {
             throw new StudentException(ResultEnum.RESULTISINVALID);

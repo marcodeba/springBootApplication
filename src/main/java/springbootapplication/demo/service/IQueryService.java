@@ -15,7 +15,7 @@ public interface IQueryService {
 
     List<Student> getStudentsByAge(Integer age);
 
-    void getStudentAge(Integer id) throws Exception;
+    void getStudentAge(Integer id);
 
     void delStudentById(Integer id);
 }

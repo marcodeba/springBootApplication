@@ -36,11 +36,7 @@ public class StudentController {
     @GetMapping(value = "/getStudentById/{stuId}")
     @ResponseBody
     public Result<Student> getStudentById(@PathVariable("stuId") Integer stuId) throws Exception {
-        try {
-            return ResultUtil.success(queryService.getStudentById(stuId));
-        } catch (Exception e) {
-            throw e;
-        }
+        return ResultUtil.success(queryService.getStudentById(stuId));
     }
 
     @GetMapping(value = "/getStudentsByAge/{age}")
