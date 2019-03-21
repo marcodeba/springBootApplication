@@ -1,7 +1,6 @@
 package springbootapplication.demo.exceptionHandler;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -10,8 +9,8 @@ import springbootapplication.demo.exception.StudentException;
 import springbootapplication.demo.utils.ResultUtil;
 
 @ControllerAdvice
+@Slf4j
 public class StudentExceptionHandler {
-    private final static Logger logger = LoggerFactory.getLogger(StudentExceptionHandler.class);
 
     @ExceptionHandler(value = Exception.class)
     @ResponseBody
@@ -21,7 +20,7 @@ public class StudentExceptionHandler {
             return ResultUtil.error(se.getCode(), se.getMessage());
         }
         // 系统异常
-        logger.error("【系统异常】{}" + e);
+        log.error("【系统异常】{}" + e);
         return ResultUtil.error(-200, "UNKNOWN ERROR");
     }
 }
