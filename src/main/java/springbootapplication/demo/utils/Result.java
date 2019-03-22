@@ -1,4 +1,4 @@
-package springbootapplication.demo.domain;
+package springbootapplication.demo.utils;
 
 public class Result<T> {
     private Integer resultCode;

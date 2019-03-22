@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 import springbootapplication.demo.dao.entity.Student;
-import springbootapplication.demo.domain.Result;
+import springbootapplication.demo.utils.Result;
 
 import javax.servlet.http.HttpServletRequest;
 

@@ -4,7 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
-import springbootapplication.demo.domain.Result;
+import springbootapplication.demo.utils.Result;
 import springbootapplication.demo.exception.StudentException;
 import springbootapplication.demo.utils.ResultUtil;
 

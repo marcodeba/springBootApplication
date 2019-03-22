@@ -1,7 +1,5 @@
 package springbootapplication.demo.utils;
 
-import springbootapplication.demo.domain.Result;
-
 public class ResultUtil {
     public static Result success(Object obj) {
         Result result = new Result();

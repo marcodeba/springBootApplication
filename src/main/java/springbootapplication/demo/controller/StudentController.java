@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import springbootapplication.demo.dao.entity.Student;
-import springbootapplication.demo.domain.Result;
+import springbootapplication.demo.utils.Result;
 import springbootapplication.demo.service.IQueryService;
 import springbootapplication.demo.utils.ResultUtil;
 
