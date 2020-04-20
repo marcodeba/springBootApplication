@@ -18,6 +18,8 @@ spring:
       pool:
         max-active: 8
         max-idle: 8
+        max-wait: -1
+        min-idle: 0
 com:
   dudu:
     name: "dudu"

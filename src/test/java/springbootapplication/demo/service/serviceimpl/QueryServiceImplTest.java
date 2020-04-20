@@ -9,8 +9,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import springbootapplication.demo.dao.entity.Student;
 import springbootapplication.demo.service.IQueryService;
 
-import static org.junit.Assert.*;
-
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class QueryServiceImplTest {
@@ -25,8 +23,7 @@ public class QueryServiceImplTest {
 
     @Test
     public void testCache() throws Exception {
-        queryService.getStudentById(15);
-        queryService.getStudentById(15);
-        queryService.getStudentById(15);
+        Student student = queryService.getStudentById(5);
+        Assert.assertEquals(new Integer(1), student.getAge());
     }
 }

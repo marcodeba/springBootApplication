@@ -12,7 +12,6 @@ import java.util.List;
 
 @Service
 public class QueryServiceImpl implements IQueryService {
-
     @Autowired
     StudentRespoitory studentRespoitory;
 
@@ -27,8 +26,7 @@ public class QueryServiceImpl implements IQueryService {
     }
 
     @Override
-    public Student getStudentById(Integer id) throws Exception {
-        System.out.println("getStudentById:" + id);
+    public Student getStudentById(Integer id) {
         if (studentRespoitory.findById(id).isPresent())
             return studentRespoitory.findById(id).get();
         else {
